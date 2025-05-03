@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="selected_background">#4CAF50</color>  <!-- Зелёный фон при выборе -->
+    <color name="default_background">#FFFFFF</color>  <!-- Белый фон по умолчанию -->
+
+    <color name="black">#FF000000</color>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="gray_600">#737373</color>
+    <color name="black_900_7f">#7f000000</color>
+    <color name="gray_700">#606060</color>
+    <color name="black_900_b2">#b2000000</color>
+    <color name="red_501">#f54035</color>
+    <color name="red_500">#eb4335</color>
+    <color name="gray_101">#f0f3fb</color>
+    <color name="gray_900">#181725</color>
+
+    <color name="gray_200">#edeeef</color>
+    <color name="gray_300">#dddddd</color>
+    <color name="gray_102">#f4f5f6</color>
+    <color name="gray_100">#f0f3fa</color>
+    <color name="green_A700">#04b636</color>
+    <color name="black_900">#000000</color>
+    <color name="bluegray_100">#d3d3d3</color>
+    <color name="green_802">#11772e</color>
+    <color name="green_801">#058e2c</color>
+    <color name="green_800">#088a2c</color>
+    <color name="bluegray_900_4c">#4c1e4128</color>
+    <color name="white_A700">#ffffff</color>
+    <color name="green_600">#1dab44</color>
+    <color name="gray_50">#f8f7ff</color>
+    <color name="_bg__logged_out_ek2_color">#FFFFFF</color>
+    <color name="_bg__status_bar_ek1_color">#000000</color>
+    <color name="border_color">#ffffff</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>

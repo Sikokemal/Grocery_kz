@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/googlepay_button_background_image"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_marginBottom="-14dp">
+
+    <!-- Основная информация о заказе -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewOrderId"
+                style="@style/OrderInfoTextView"
+                android:text="Order ID: 12345"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textColor="@color/colorAccent"/>
+
+            <TextView
+                android:id="@+id/textViewCustomerName"
+                style="@style/OrderInfoTextView"
+                android:text="Customer: John Doe"
+                android:layout_marginTop="4dp"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textViewCustomerAddress"
+                style="@style/OrderInfoTextView"
+                android:text="Address: 123 Main St, City"
+                android:layout_marginTop="4dp"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/textViewDeliveryMethod"
+                style="@style/OrderInfoTextView"
+                android:text="Delivery Method: Pickup"
+                android:layout_marginTop="4dp"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textViewStatus"
+                style="@style/OrderInfoTextView"
+                android:text="Status: Pending"
+                android:layout_marginTop="4dp"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/green_801" />
+        </LinearLayout>
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animationView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:visibility="invisible"
+            app:lottie_autoPlay="false"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/delivery" />
+    </LinearLayout>
+
+    <!-- Кнопки действий -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        android:gravity="end">
+
+        <Button
+            android:id="@+id/openPdfButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/black_900"
+            android:textColor="@android:color/white"
+            android:text="Проверять чек"
+            android:padding="10dp"
+            android:layout_marginEnd="8dp"/>
+
+        <Button
+            android:id="@+id/acceptButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/black_900"
+            android:textColor="@android:color/white"
+            android:text="Принять"
+            android:padding="10dp"
+            android:layout_marginEnd="8dp"/>
+
+        <Button
+            android:id="@+id/completeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/black_900"
+            android:textColor="@android:color/white"
+            android:text="Завершить"
+            android:padding="10dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        android:layout_marginTop="8dp"
+        android:gravity="start">
+
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_gravity="center_horizontal"
+
+            android:visibility="gone"
+            android:src="@drawable/ic_arrow_back_black_24dp"
+            android:background="@null"
+            android:padding="10dp" />
+
+        <ImageButton
+            android:id="@+id/addressButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_gravity="center_horizontal"
+
+            android:src="@drawable/ic_person"
+            android:background="@null"
+            android:padding="10dp" />
+
+        <Button
+            android:id="@+id/callButton"
+            style="@style/OrderButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginStart="@dimen/_1pxh"
+            android:layout_gravity="center_horizontal"
+            android:drawableLeft="@android:drawable/stat_sys_speakerphone"
+            android:drawablePadding="8dp"
+            android:backgroundTint="@color/green_801"
+            android:textColor="@android:color/white"
+            android:padding="10dp"
+            android:text="Позвонить"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <!-- Стрелка для раскрытия/скрытия деталей заказа -->
+    <ImageButton
+        android:id="@+id/toggleDetailsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|bottom"
+        android:src="@drawable/ic_arrowdown"
+        android:background="@null" />
+
+    <!-- Скрытый раздел для деталей заказа и общей суммы -->
+    <LinearLayout
+        android:id="@+id/detailsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:layout_marginTop="2dp"
+        android:background="@color/white_A700"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Список продуктов"
+            android:textStyle="bold"
+            android:textSize="18sp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/cartProductsRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/item_seller_productlist"
+            android:layout_marginTop="8dp"
+            android:nestedScrollingEnabled="false" />
+
+        <TextView
+            android:id="@+id/textViewTotalAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Total Amount: "
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@color/colorAccent" />
+    </LinearLayout>
+</LinearLayout>

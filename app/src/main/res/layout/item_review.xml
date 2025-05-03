@@ -1,0 +1,63 @@
+<!-- item_review.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/_bg___button_ek5_shape"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginBottom="8dp"
+
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imageViewUserAvatar"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/profile1"
+            app:shapeAppearanceOverlay="@style/Circular" />
+
+        <TextView
+            android:id="@+id/textViewUserName1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="8dp"
+            android:text="Кемал Серик"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- Добавлено текстовое поле для имени пользователя -->
+
+    <TextView
+        android:id="@+id/textViewReviewText"
+        android:layout_width="match_parent"
+        android:text="from bs"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_marginTop="8dp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black" />
+
+    <RatingBar
+        android:layout_marginStart="-85dp"
+        android:layout_marginTop="-15dp"
+        android:layout_marginBottom="-20dp"
+        android:id="@+id/ratingBarReview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:isIndicator="true"
+        android:numStars="5"
+        android:progressTint="@android:color/holo_orange_dark"
+        android:rating="1.0"
+        android:scaleX="0.3"
+        android:scaleY="0.3"
+        android:stepSize="1" /> <!-- Желтый (золотистый) цвет звезд -->
+</LinearLayout>

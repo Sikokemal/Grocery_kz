@@ -1,0 +1,12 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_cart"
+        android:icon="@drawable/common_google_signin_btn_icon_dark"
+        android:title="Корзина"
+        app:showAsAction="always" />
+
+    <!-- Дополнительные пункты меню, если необходимо -->
+
+</menu>

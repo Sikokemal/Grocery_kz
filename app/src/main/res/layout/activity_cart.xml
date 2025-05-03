@@ -1,0 +1,177 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Toolbar и RecyclerView остаются прежними -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        app:subtitleTextColor="@color/black_900"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white_A700"
+        app:title="Корзинка"
+        app:titleMarginStart="@dimen/_12pxh"
+        app:titleTextColor="#000000" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewCartProducts"
+        android:layout_width="match_parent"
+        android:layout_height="360dp"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:background="@drawable/rectangle_bg_white_a700_radius_8"
+        android:clipToPadding="false"
+        android:paddingTop="1dp"
+        android:paddingRight="@dimen/_10pxh"
+        android:paddingLeft="@dimen/_10pxh"
+        android:paddingBottom="1dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/new_cart_product_item" />
+
+    <LinearLayout
+        android:layout_below="@+id/recyclerViewCartProducts"
+        android:id="@+id/lineradd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp"
+         android:background="#FFFFFF">
+        <!-- Текущий адрес -->
+        <TextView
+            android:id="@+id/textUserAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="Загрузка адреса..."
+            android:textSize="18sp"
+            android:paddingBottom="6dp" />
+    </LinearLayout>
+
+    <!-- RadioGroup с улучшенным стилем -->
+
+    <RadioGroup
+        android:id="@+id/radioGroupDelivery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/recyclerViewCartProducts"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:visibility="gone"
+        android:gravity="center">
+
+        <RadioButton
+            android:id="@+id/radioButtonDelivery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="Доставка"
+            android:textSize="16sp"
+            android:buttonTint="?attr/colorPrimary" />
+
+        <RadioButton
+            android:id="@+id/radioButtonPickup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Самовывоз"
+            android:textSize="16sp"
+            android:buttonTint="?attr/colorPrimary" />
+
+    </RadioGroup>
+
+    <!-- Обертка для текстовой информации и кнопок внизу -->
+    <LinearLayout
+        android:layout_below="@+id/lineradd"
+        android:layout_marginTop="-22dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <TextView
+            android:id="@+id/textViewTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="19sp"
+            android:text="Общая сумма: 0.00"
+            android:layout_marginBottom="15dp" />
+
+        <Button
+            android:id="@+id/buttonqq1"
+            android:drawableStart="@drawable/frame1"
+            android:paddingStart="45dp"
+            android:text="Каспий платеж"
+            android:drawablePadding="45dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:textAllCaps="false"
+            style="@style/btnSolidRounded"
+            tools:text="Каспий платеж" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#FF5722"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_marginTop="7dp"
+            android:text="После оплаты поделитесь чеком" />
+
+        <Button
+            android:id="@+id/buttonCheckout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:padding="@dimen/_4pxh"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textAllCaps="false"
+            style="@style/btnSolidRounded"
+            android:text="Оформить заказ"
+             />
+
+        <Button
+            android:id="@+id/bb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:padding="@dimen/_4pxh"
+            android:ellipsize="end"
+            android:visibility="gone"
+            android:gravity="center"
+             android:singleLine="true"
+            android:textAllCaps="false"
+            style="@style/btnSolidRounded"
+            android:text="мои заказы"
+            />
+
+        <com.google.android.gms.wallet.button.PayButton
+            android:id="@+id/googlePayButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:foregroundGravity="bottom"
+            android:visibility="visible" />
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:visibility="invisible"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/buttonqq1"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="38dp"
+            android:layout_marginEnd="244dp"
+            android:text="TextView" />
+    </LinearLayout>
+
+
+</RelativeLayout>

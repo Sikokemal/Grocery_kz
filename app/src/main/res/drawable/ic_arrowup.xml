@@ -1,0 +1,9 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="48dp"
+    android:viewportHeight="48"
+    android:viewportWidth="48"
+    android:width="48dp">
+    <path
+        android:fillColor="#000000"
+        android:pathData="M24,16L16,24H32L24,16z"/> <!-- Изменено для центрации -->
+</vector>

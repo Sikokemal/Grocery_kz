@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="1dp"
+    android:theme="@style/AppTheme1"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/white_A700"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            style="@style/groupStylewhite_A700"
+            android:background="@color/white_A700"
+            android:elevation="4dp"
+            android:theme="?attr/actionBarTheme"
+            app:layout_collapseMode="pin"
+            app:layout_scrollFlags="scroll|enterAlways">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                 android:id="@+id/imageView"
+                 android:src="@drawable/profile1"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:scaleType="centerCrop"
+                app:shapeAppearanceOverlay="@style/Circular"
+               />
+
+
+            <TextView
+                android:id="@+id/txtSearchProduct"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="42dp"
+                android:layout_marginTop="12dp"
+                android:ellipsize="end"
+                style="@style/txtPoppinsbold18"
+                android:letterSpacing="0.03"
+                android:singleLine="true"
+                android:text="Добавить продукт" />
+        </androidx.appcompat.widget.Toolbar>
+
+
+        <LinearLayout
+            android:id="@+id/line1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/toolbar"
+            android:layout_marginTop="@dimen/_12pxh"
+            android:gravity="center"
+
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="6dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/photo" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:padding="2dp">
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutImages"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" />
+            </HorizontalScrollView>
+
+        </LinearLayout>
+
+
+
+
+
+        <LinearLayout
+            android:padding="16dp"
+            android:layout_marginTop="-12dp"
+            android:id="@+id/line2"
+            android:paddingTop="1dp"
+            android:layout_below="@id/line1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayoutName11"
+                app:endIconMode="clear_text"
+                app:startIconDrawable="@drawable/ic_person"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2pxv">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextProductName"
+                    android:layout_width="match_parent"
+
+                     android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_50pxv"
+                    android:ellipsize="end"
+                    android:hint="Название товара"
+                    android:inputType="textEmailAddress"
+                    android:paddingStart="@dimen/_16pxh"
+                    android:paddingTop="@dimen/_18pxv"
+                    android:paddingEnd="@dimen/_30pxh"
+                    android:paddingBottom="@dimen/_17pxv"
+                    android:singleLine="true"
+                    android:textColorHint="@color/black_900_7f"
+                    tools:ignore="Autofill" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayoutName13"
+                    android:layout_width="245dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10pxv"
+                    app:endIconMode="clear_text"
+                    app:startIconDrawable="@drawable/ic_person">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editTextProductPrice"
+                        android:layout_width="match_parent"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_50pxv"
+                        android:ellipsize="end"
+                        android:hint="Цена товара"
+                        android:inputType="textEmailAddress"
+                        android:paddingStart="@dimen/_16pxh"
+                        android:paddingTop="@dimen/_18pxv"
+                        android:paddingEnd="@dimen/_30pxh"
+                        android:paddingBottom="@dimen/_17pxv"
+                        android:singleLine="true"
+                        android:textColorHint="@color/black_900_7f"
+                        tools:ignore="Autofill" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Spinner
+                    android:id="@+id/unitSpinner"
+                    android:paddingTop="12dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/unit_array" />
+
+            </LinearLayout>
+
+            <!-- В вашем layout файле, например add_new_product.xml -->
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayoutName12"
+                app:endIconMode="clear_text"
+                app:startIconDrawable="@drawable/ic_person"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10pxv">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextDescription1"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_50pxv"
+                    android:ellipsize="end"
+                    android:hint="Описание"
+                    android:inputType="textEmailAddress"
+                    android:paddingStart="@dimen/_16pxh"
+                    android:paddingTop="@dimen/_18pxv"
+                    android:paddingEnd="@dimen/_30pxh"
+                    android:paddingBottom="@dimen/_17pxv"
+                     android:textColorHint="@color/black_900_7f"
+                    tools:ignore="Autofill" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/_13pxh"
+                android:layout_height="wrap_content"
+                 style="@style/Widget.App.TextInputLayout.ExposedDropdownMenu"
+                android:id="@+id/textInputLayout">
+
+
+                <AutoCompleteTextView
+                    android:id="@+id/spinnerCategory"
+                    android:padding="12dp"
+                    style="@style/AutoCompleteTextViewStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:simpleItems="@array/categories"
+
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Удалить"
+            android:visibility="gone"
+            android:layout_gravity="end"
+            android:background="@color/red"
+            android:textColor="@color/white"/>
+
+        <Button
+            android:id="@+id/buttonAddProduct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/line2"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="110dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="110dp"
+
+            android:text="Добавить товар" />
+
+        <LinearLayout
+            android:layout_below="@id/buttonAddProduct"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="12dp"
+                android:ellipsize="end"
+                style="@style/txtPoppinsbold18"
+                android:letterSpacing="0.03"
+                android:singleLine="true"
+                android:text="Мои товары" />
+            <Button
+                android:id="@+id/buttonAddCategories"
+                android:layout_width="wrap_content"
+                android:visibility="gone"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/buttonAddProduct"
+
+                android:layout_marginTop="16dp"
+                android:text="Добавить category" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewProducts"
+
+                 android:paddingStart="@dimen/_10pxh"
+                android:layout_height="wrap_content"
+                 android:layout_marginTop="@dimen/_19pxv"
+                android:layout_width="match_parent"
+                tools:listitem="@layout/cardviewall"
+                android:nestedScrollingEnabled="false"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:spanCount="2" />
+
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/line2"
+            android:layout_marginTop="16dp"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+</ScrollView>

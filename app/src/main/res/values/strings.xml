@@ -1,0 +1,90 @@
+<resources>
+    <string-array name="unit_array">
+        <item>тг/шт</item>
+        <item>тг/кг</item>
+        <item>тг/л</item>
+    </string-array>
+
+
+    <string-array name="categories">
+        <item>Фрукты</item>
+        <item>Овощи</item>
+        <item>Молочные продукты</item>
+        <item>Мясо и птица</item>
+        <item>Рыба и морепродукты</item>
+        <item>Зерновые и Бобовые</item>
+        <item>Яйца</item>
+        <item>Мёд и другие</item>
+        <item>Орехи и семена</item>
+        <item>Разное</item>
+    </string-array>
+
+    <!-- Checkout -->
+    <string name="google_pay_status_unavailable">Unfortunately, Google Pay is not available on this device.</string>
+    <string name="payments_show_name">Successfully received payment data for %s!</string>
+    <string name="gateway_replace_name_example">"Gateway name set to \"example\" - please modify Constants.java and replace it with your own gateway."</string>
+    <string name="checkout_item_description">Description</string>
+    <string name="app_name">Grocery kz</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="google_maps_key">AIzaSyA7rVcZnAVeowNf4Aglc0sJAN_xtOl5hxk</string>
+    <string name="default_web_client_id">266698047840-sg7h9l84dmpmki8djm435m4sic6fubpp.apps.googleusercontent.com</string>
+    <string name="loading">Loading…</string>
+    <string name="no_internet_connection">No internet connection!</string>
+    <string name="lbl_idr14_5002">IDR14.500</string>
+    <string name="msg_search_vegetabl">Search vegetables..</string>
+    <string name="lbl_gratis_ongkir">Gratis ongkir</string>
+    <string name="lbl_heavy_food">Heavy food</string>
+    <string name="lbl_idr_14_500">IDR 14.500</string>
+    <string name="lbl_idr16_000_kg2">IDR16.000/kg</string>
+    <string name="lbl_sawi_hijau">Sawi Hijau</string>
+    <string name="lbl_vegetables">Vegetables</string>
+    <string name="lbl_broccoli">Broccoli</string>
+    <string name="msg_persediaan_ter">*persediaan terbatas</string>
+    <string name="lbl_idr_16_000_kg">IDR 16.000/kg</string>
+    <string name="lbl_green_broccoli">Green Broccoli</string>
+    <string name="lbl_limited">*limited</string>
+    <string name="lbl_idr_16_000">IDR 16.000</string>
+    <string name="lbl_idr16_0002">IDR16.000</string>
+    <string name="lbl_idr14_500_kg2">IDR14.500/kg</string>
+    <string name="lbl_spice">Spice</string>
+    <string name="lbl_your_email">Е-mail</string>
+    <string name="msg_don_t_have_an_a">У вас нет учетной записи? Подписывать</string>
+    <string name="lbl_email_address">Email address</string>
+    <string name="lbl_sign_up">Зарегистрироваться</string>
+    <string name="lbl_password">Пароль</string>
+    <string name="lbl_or_with">    или</string>
+    <string name="lbl_hi_welcome">Hi, Welcome!</string>
+    <string name="msg_don_t_have_an_a2">Don\u2019t have an account?</string>
+    <string name="msg_forgot_password">Забыли пароль?</string>
+    <string name="lbl_facebook">Facebook</string>
+    <string name="lbl_google">Google</string>
+    <string name="lbl_remember_me">Запомнить меня</string>
+    <string name="lbl_log_in">Войти</string>
+    <string name="lbl_flashsale">Flashsale &#128293;</string>
+    <string name="lbl_idr8_000_kg2">IDR8.000/kg</string>
+    <string name="lbl_fruits">Fruits</string>
+    <string name="lbl_discount_50">Discount 50%</string>
+    <string name="lbl_all">All</string>
+    <string name="lbl_green_pokcho">Green Pokcho</string>
+    <string name="lbl_idr8_0002">IDR8.000</string>
+    <string name="lbl_kg">/kg</string>
+    <string name="lbl_tomato">Tomato</string>
+    <string name="lbl_ms_arlina">Ms. Arlina</string>
+    <string name="lbl_idr_8_000">IDR 8.000</string>
+    <string name="lbl_idr_8_000_kg">IDR 8.000/kg</string>
+    <string name="lbl_red_tomat">Red Tomat</string>
+    <string name="msg_terlaris_hari_i">Terlaris hari ini</string>
+    <string name="lbl_idr_14_500_kg">IDR 14.500/kg</string>
+    <string name="lbl_claim_voucher">Claim voucher</string>
+    <string name="lbl_promo_untukmu">Promo untukmu</string>
+    <string name="ek_img_content">ExportKit Image</string>
+    <string name="time_ek2_string">9:27</string>
+    <string name="register_string">register</string>
+    <string name="log_in_string">log in</string>
+    <string name="register_ek1_string">register</string>
+    <string name="photo_string">photo</string>
+    <string name="pawel_czerwinski_string">Pawel Czerwinski</string>
+    <string name="expandable_text">at BC 227, 2nd Floor, Matrix Business Tower, B4, Sector 132, Noida, UP-201301, hereinafter  \n        referred to as GeeksforGeeks. We also offer paid Courses managed by Sanchhaya Classes Pvt. Ltd. \n        with registered office address B-142, Vishwash Park, Uttam Nagar, New Delhi, North Delhi, Delhi, India, 110059. \n        At GeeksforGeeks, we value your trust and  respect your privacy. This privacy statement (“Privacy Statement”) \n        applies to the treatment of personally identifiable information submitted by, or otherwise obtained from,  \n        you in connection with the associated application (“Application”). The Application is  \n        provided by GeeksforGeeks (and may be provided by Geeksforgeeks on behalf  \n        of a GeeksforGeeks licensor or partner (“Application Partner”).  \n        By using or otherwise accessing the Application, yo\n</string>
+    <string name="rating_count"><![CDATA[<string name=\"rating_count\">Количество оценок: %d</string>\n\n]]></string>
+</resources>

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/groupStylewhite_A700"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/imageViewAvatar"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:scaleType="fitXY"
+        android:layout_marginTop="16dp"
+    android:layout_centerHorizontal="true"
+    android:src="@drawable/profile1" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayoutName"
+        android:layout_below="@+id/imageViewAvatar"
+        app:endIconMode="clear_text"
+    app:startIconDrawable="@drawable/ic_person"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_20pxv">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/editTextName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_50pxv"
+    android:ellipsize="end"
+    android:hint="Имя"
+    android:inputType="textPersonName"
+    android:paddingStart="@dimen/_16pxh"
+    android:paddingTop="@dimen/_18pxv"
+    android:paddingEnd="@dimen/_30pxh"
+    android:paddingBottom="@dimen/_17pxv"
+    android:singleLine="true"
+    android:textColorHint="@color/black_900_7f"
+    tools:ignore="Autofill" />
+</com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayoutAddress"
+        android:layout_width="match_parent"
+        android:layout_below="@id/textInputLayoutName"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        app:endIconMode="clear_text"
+        app:startIconDrawable="@drawable/ic_person"
+    android:hint="Address" >
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/editTextAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/_16pxh"
+        android:paddingTop="@dimen/_18pxv"
+        android:paddingEnd="@dimen/_30pxh"
+        android:paddingBottom="@dimen/_17pxv"
+    android:textColorHint="@color/black_900_7f"
+    android:inputType="textPostalAddress"
+    android:ellipsize="end"
+    android:singleLine="true"
+    tools:ignore="Autofill" />
+
+</com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayoutPhoneNumber"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textInputLayoutAddress"
+        android:layout_marginTop="8dp"
+        app:endIconMode="clear_text"
+    app:startIconDrawable="@drawable/ic_phone"
+    android:hint="Номер телефона">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextPhoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/black_900_7f"
+            android:inputType="phone"
+            android:hint=""
+            tools:ignore="Autofill" />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayoutKaspiNumber"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:visibility="visible"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textInputLayoutPhoneNumber"
+        android:layout_marginTop="8dp"
+        app:endIconMode="clear_text"
+        app:startIconDrawable="@drawable/ic_phone"
+        android:hint="Kaspi mobile">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextKaspiNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/black_900_7f"
+            android:inputType="phone"
+            android:hint="Kaspi mobile"
+            tools:ignore="Autofill" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <!-- Добавьте другие поля, если необходимо -->
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieAnimationView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="invisible"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="load.json"
+        app:lottie_loop="true" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/black"
+        android:paddingStart="20dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="10dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:text="Сохранить"
+        android:layout_below="@id/textInputLayoutKaspiNumber"
+        android:layout_marginTop="16dp"
+        app:cornerRadius="10dp"
+        app:iconGravity="textStart"/>
+
+
+     <!-- Установите изображение по умолчанию -->
+</RelativeLayout>
