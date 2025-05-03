@@ -1,0 +1,36 @@
+name: Android CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up JDK 17
+      uses: actions/setup-java@v3
+      with:
+        distribution: 'temurin'
+        java-version: '17'
+
+    - name: Give gradlew permission to execute
+      run: chmod +x gradlew
+
+    - name: Build with Gradle (debug APK)
+      run: ./gradlew assembleDebug  # Сборка дебаг версии APK
+
+    - name: List directory contents (debug APK)
+      run: ls -R app/build/outputs/apk/debug/  # Вывод содержимого директории для проверки
+
+    - name: Upload the debug APK artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: app-debug-apk
+        path: app/build/outputs/apk/debug/app-debug.apk  # Убедитесь, что путь правильный
